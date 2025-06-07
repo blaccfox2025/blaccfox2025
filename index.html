@@ -1,79 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download Page</title>
-    <link rel="icon" type="image/png" href="root/icon.png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Drawing Gallery</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background: #f0f4f8;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
             margin: 0;
+            padding: 20px;
             color: #333;
         }
 
-        .download-container {
-            text-align: center;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            padding: 40px 50px;
-            max-width: 400px;
-            width: 100%;
-        }
-
         h1 {
-            color: #3c8d9e;
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 18px;
+            text-align: center;
             margin-bottom: 30px;
+            color: #cc5500; /* ginger-like color */
         }
 
-        .download-button {
-            padding: 15px 30px;
-            background: #3c8d9e;
-            color: #fff;
-            font-size: 18px;
-            border: none;
-            border-radius: 5px;
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
             cursor: pointer;
-            transition: background 0.3s ease;
+            transition: transform 0.2s ease;
         }
 
-        .download-button:hover {
-            background: #307f84;
+            .gallery-item:hover {
+                transform: scale(1.05);
+            }
+
+            .gallery-item img {
+                width: 100%;
+                display: block;
+                height: auto;
+            }
+
+        .caption {
+            padding: 10px;
+            text-align: center;
+            font-style: italic;
+            font-size: 0.95em;
+            color: #666;
         }
 
-        .download-button:active {
-            background: #266c6d;
-        }
-
-        .footer {
-            margin-top: 20px;
-            font-size: 14px;
-            color: #888;
+        @media (max-width: 600px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-
-    <div class="download-container">
-        <h1>Download Your File</h1>
-        <p>Click the button below to download your file. </br> <a href="https://github.com/blaccfox2025">https://github.com/blaccfox2025</a></p>
-        <button class="download-button" onclick="window.location.href='root/0414202505131020101.zip'">Download Now</button>
-        <div class="footer">
-            <p>Blaccfox2025 Window/Debi Eclipse C Project</p>
+    <h1>My Drawing Gallery</h1>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="root\1.png" alt="Drawing 1" />
+            <div class="caption">Drawing 1 - Sunset vibes</div>
+        </div>
+        <div class="gallery-item">
+            <img src="root\2.png" alt="Drawing 2" />
+            <div class="caption">Drawing 2 - Ginger Classmate</div>
+        </div>
+        <div class="root\3.png">
+            <img src="drawing3.jpg" alt="Drawing 3" />
+            <div class="caption">Drawing 3 - Abstract lines</div>
+        </div>
+        <div class="gallery-item">
+            <img src="drawing4.jpg" alt="Drawing 4" />
+            <div class="caption">Drawing 4 - Dreamscape</div>
         </div>
     </div>
-
 </body>
 </html>
